@@ -1,0 +1,25 @@
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    s = input()
+    l = 0
+    r = len(s) - 1
+     
+    mismatch = False
+    differ = 0
+    
+    while l < r:
+        if s[l] != s[r]:
+          if not mismatch:
+            differ+=1
+            mismatch=True
+        else:
+           mismatch=False    
+        l += 1
+        r -= 1
+        
+    
+    if differ <= 1:
+        print("Yes")
+    else:
+        print("No")
