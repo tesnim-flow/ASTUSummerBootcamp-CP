@@ -1,0 +1,23 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()))
+
+    seen = set()
+    main = []
+    dupli = []
+    arry = sorted(arr)
+
+    if arry[0] != 0:
+        print(*arry)
+    else:
+        for x in arry:
+            if x not in seen:
+                main.append(x)
+                seen.add(x)
+            else:
+                dupli.append(x)
+
+        ans = main + dupli
+        print(*ans)
